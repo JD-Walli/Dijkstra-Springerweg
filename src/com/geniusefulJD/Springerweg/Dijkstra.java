@@ -18,6 +18,7 @@ public class Dijkstra {
         aMatrix.befuellenSpringermuster();
         aMatrix.show();
 
+        // VARIANTE 1: (automatische Lösung des Problems, die auf die Entsprechenden Ecken draufzukommen)
         //Array mit zu erreichenden Punkten (Punkten, die auf dem Weg nacheinander berührt werden sollen): links unten, rechts unten, rechts oben
         int[] punkteFolge = {parse2dTo1d(0,feldGroesse-1,feldGroesse), parse2dTo1d(feldGroesse-1,feldGroesse-1,feldGroesse),parse2dTo1d(feldGroesse-1,0,feldGroesse)};
 
@@ -31,6 +32,16 @@ public class Dijkstra {
         for (int i:abschnitt1) {
             System.out.print(i+" ");
         }
+        //um Variante 1 abzuschalten, bis hierher ausklammern
+
+        /*
+        // VARIANTE 2: (manuelle Eingabe von Start- und Endfeld. das Schachfeld ist von oben links nach unten rechts numeriert.)
+        ArrayList <Integer> manuelleReihe = dijkstra(aMatrix, 1, 3); //abschnitt von links unten nach rechts unten
+        System.out.println("\n");
+        for (int i:manuelleReihe) {
+            System.out.print(i+" ");
+        }
+         */
     }
 
 
